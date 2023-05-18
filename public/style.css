@@ -19,8 +19,6 @@ section.chat__section {
   background: #1e2534;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
-
-  display: none;
 }
 .brand {
   padding: 20px;
@@ -96,86 +94,7 @@ h2 {
   margin: 21px;
 }
 @media only screen and (max-width: 600px) {
-  .myname {
+  h2 {
     display: none;
-  }
-}
-
-.modal {
-  background-color: #21283680;
-  display: flex;
-  flex-direction: column;
-  width: 500px;
-  justify-content: center;
-  align-items: center;
-  padding: 30px;
-  border-radius: 10px;
-}
-.modal input {
-  width: 470px;
-  border: none;
-  border-radius: 5px;
-  height: 40px;
-  padding: 5px;
-  margin: 10px;
-  font-size: 16px;
-  outline: none;
-}
-.modal h2 {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #f59e0b;
-  margin-left: 0;
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 25px;
-}
-
-.modal button {
-  background-color: #f59e0b;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  font-size: 15px;
-  margin-top: 10px;
-  cursor: pointer;
-  margin-top: 30px;
-}
-.modal button:hover {
-  background-color: #f59f0bc5;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
-  font-size: 15px;
-  margin-top: 10px;
-  cursor: pointer;
-  margin-top: 30px;
-}
-#login {
-  display: none;
-}
-
-.modalBottom {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.loginBottom {
-  display: flex;
-}
-
-.checkB {
-  display: flex;
-  background-color: #f56565;
-  width: 300px;
-}
-
-@media only screen and (max-width: 600px) {
-  .modal {
-    width: 300px;
-  }
-
-  .modal input {
-    width: 260px;
   }
 }

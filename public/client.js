@@ -1,61 +1,17 @@
-//-----------------------------
-let sname = document.getElementById("sname");
-let semail = document.getElementById("semail");
-
-let lname = document.getElementById("lname");
-let lemail = document.getElementById("lemail");
-
-let signUPModal = document.getElementById("signUP");
-let loginModal = document.getElementById("login");
-
-let pname = localStorage.getItem("name");
-let pemail = localStorage.getItem("email");
-
-let myname = document.getElementsByClassName("myname")[0];
-let chat = document.getElementsByClassName("chat__section")[0];
-
-if (pname && pemail) {
-  signUP.style.display = "none";
-  // loginModal.style.display = "inherit";
-  chat.style.display = "block";
-} else {
-  loginModal.style.display = "none";
-}
-
-const submit = () => {
-  localStorage.setItem("name", sname.value);
-  localStorage.setItem("email", semail.value);
-  sname.value = "";
-  semail.value = "";
-  chat.style.display = "block";
-  signUP.style.display = "none";
-  loginModal.style.display = "none";
-  myname.innerHTML = localStorage.getItem("name");
-};
-
-const checkLogin = () => {
-  console.log("hi");
-  if (pname === lname.value && pemail === lemail.value) {
-    signUP.style.display = "none";
-    loginModal.style.display = "none";
-    chat.style.display = "block";
-  }
-};
-
-const showLogin = () => {
-  signUP.style.display = "none";
-  chat.style.display = "none";
-  loginModal.style.display = "inherit";
-};
-
-//-------------------
 const socket = io();
+
+let name;
 
 let textarea = document.querySelector("#textarea");
 let messageArea = document.querySelector(".message__area");
-let name = localStorage.getItem("name");
+
+let myname = document.querySelector(".myname");
+do {
+  name = prompt("Please enter your name: ");
+} while (!name);
+
 socket.emit("new-user-joined", name);
-myname.innerHTML = localStorage.getItem("name");
+myname.innerHTML = name;
 textarea.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     sendMessage(e.target.value);
