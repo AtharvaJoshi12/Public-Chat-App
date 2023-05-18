@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChattHub - Chat App</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="modal" id="signUP">
+      <h2>Sign Up</h2>
+      <input type="text" id="sname" value="" placeholder="Enter name" />
+      <input type="email" id="semail" value="" placeholder="Enter Your Email" />
+      <div class="modalBottom">
+        <button onclick="showLogin()">Log in</button>
+        <button onclick="submit()">Submit</button>
+      </div>
+    </div>
+
+    <div class="modal" id="login">
+      <h2>Login</h2>
+      <input type="text" id="lname" value="" placeholder="Enter name" />
+      <input type="email" id="lemail" value="" placeholder="Enter Your Email" />
+      <div class="loginBottom">
+        <button onclick="checkLogin()">Submit</button>
+      </div>
+    </div>
+
+    <section class="chat__section">
+      <div class="brand">
+        <img height="40" src="/logo.png" alt="" />
+        <h1>ChattHub</h1>
+        <h2 class="myname">Name</h2>
+      </div>
+      <div class="message__area"></div>
+      <div class="typing"></div>
+      <div class="">
+        <textarea
+          id="textarea"
+          cols="30"
+          rows="1"
+          placeholder="Write a message ..."
+        ></textarea>
+        <button onclick="sendButton()" class="btn">Send</button>
+      </div>
+    </section>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/client.js"></script>
+  </body>
+</html>

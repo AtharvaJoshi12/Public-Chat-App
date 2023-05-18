@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+section.chat__section {
+  width: 750px;
+  max-width: 90%;
+  background: #1e2534;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  display: none;
+}
+.brand {
+  padding: 20px;
+  background: #f59e0b;
+  display: flex;
+  align-items: center;
+}
+.brand h1 {
+  /* text-transform: uppercase; */
+  font-size: 20px;
+  color: rgb(34, 34, 34);
+  margin-left: 10px;
+}
+.message__area {
+  height: 400px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  padding-top: 40px;
+}
+textarea {
+  width: 100%;
+  border: none;
+  padding: 20px;
+  font-size: 16px;
+  outline: none;
+  background: #111827;
+  color: white;
+  border: 1px solid rgb(87, 87, 87);
+}
+
+.message {
+  padding: 20px;
+  border-radius: 4px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  position: relative;
+}
+.incoming {
+  background: #f56565;
+  color: white;
+}
+.outgoing {
+  background: #e9eafd;
+  color: #65666e;
+  margin-left: auto;
+}
+.message h4 {
+  position: absolute;
+  top: -20px;
+  left: 0;
+  color: rgb(167, 164, 164);
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 15px;
+  color: rgb(34, 34, 34);
+  margin-left: 500px;
+}
+
+.btn {
+  width: 100%;
+  height: 41px;
+  border-radius: 5px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.typing {
+  color: white;
+  margin: 21px;
+}
+@media only screen and (max-width: 600px) {
+  .myname {
+    display: none;
+  }
+}
+
+.modal {
+  background-color: #21283680;
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+.modal input {
+  width: 470px;
+  border: none;
+  border-radius: 5px;
+  height: 40px;
+  padding: 5px;
+  margin: 10px;
+  font-size: 16px;
+  outline: none;
+}
+.modal h2 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #f59e0b;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.modal button {
+  background-color: #f59e0b;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+.modal button:hover {
+  background-color: #f59f0bc5;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  font-size: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+#login {
+  display: none;
+}
+
+.modalBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.loginBottom {
+  display: flex;
+}
+
+.checkB {
+  display: flex;
+  background-color: #f56565;
+  width: 300px;
+}
+
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 300px;
+  }
+
+  .modal input {
+    width: 260px;
+  }
+}
